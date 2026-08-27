@@ -8,6 +8,15 @@
 
 ## 🤖 Your First Vibe Coding LLM Application
 
+### 🚀 Live Deployment
+
+| | URL |
+|---|---|
+| **Frontend** | https://mental-coach-frontend-chi.vercel.app |
+| **Backend API** | https://aie-challenge-backend-tan.vercel.app |
+
+**Stack:** FastAPI (Python 3.12) + Next.js 16 · Anthropic Claude Haiku · Deployed on Vercel
+
 > If you are a novice, and need a bit more help to get your dev environment off the ground, check out this [Setup Guide](docs/GIT_SETUP.md). This guide will walk you through the 'git' setup you need to get started.
 
 > For additional context on LLM development environments and API key setup, you can also check out our [Interactive Dev Environment for LLM Development](https://github.com/AI-Maker-Space/Interactive-Dev-Environment-for-AI-Engineers).
@@ -88,8 +97,11 @@ Got everything in place? Let's move on!
 
 1. Install the [`uv`](https://github.com/astral-sh/uv) package manager (`pip install uv`). `uv` will download and manage Python 3.12 for you the first time you run a project command.
 2. From the project root, install dependencies with `uv sync`. This creates `.venv/` (and fetches Python 3.12 automatically if needed).
-3. Set your OpenAI API key in the shell before running the server, for example `export OPENAI_API_KEY=sk-...`.
-4. Start the backend directly from the project root with `uv run uvicorn api.index:app --reload`. The server will run on `http://localhost:8000` with auto-reload enabled for development.
+3. Create a `.env` file in the project root with your Anthropic API key:
+     ```
+     ANTHROPIC_API_KEY=sk-ant-...
+     ```
+4. Start the backend from the project root with `uv run uvicorn api.index:app --reload`. The server will run on `http://localhost:8000` with auto-reload enabled for development.
 5. Additional backend details live in `api/README.md`.
 
 </details>
