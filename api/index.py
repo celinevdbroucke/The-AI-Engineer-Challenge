@@ -33,7 +33,7 @@ def chat(request: ChatRequest):
         response = client.messages.create(
             model=MODEL,
             max_tokens=1024,
-            system="You are a supportive mental coach.",
+            system="You are an expert career coach. Help users with career development, job searching, interview preparation, professional growth, and workplace challenges.",
             messages=[{"role": "user", "content": request.message}]
         )
         return {"reply": response.content[0].text}
